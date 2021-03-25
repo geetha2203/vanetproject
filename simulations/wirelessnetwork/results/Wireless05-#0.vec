@@ -1,0 +1,358 @@
+version 2
+run Wireless05-0-20210217-10:30:18-19184
+attr configname Wireless05
+attr datetime 20210217-10:30:18
+attr experiment Wireless05
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network WirelessNetwork1
+attr processid 19184
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.host*.wlan[0].radio.receiver.ignoreInterference false
+param *.host*.wlan[0].radio.transmitter.interferenceRange 500m
+param *.hostA.wlan[0].radio.displayInterferenceRange true
+param *.visualizer.dataLinkVisualizer.packetFilter "\"\""
+param *.host*.forwarding true
+param *.configurator.config "xml(\"<config><interface hosts='**' address='10.0.0.x' netmask='255.255.255.0'/><autoroute metric='errorRate'/></config>\")"
+param *.configurator.optimizeRoutes false
+param *.host*.ipv4.routingTable.netmaskRoutes "\"\""
+param *.visualizer.physicalLinkVisualizer.displayLinks true
+param *.visualizer.dataLinkVisualizer.displayLinks true
+param *.visualizer.networkRouteVisualizer.displayRoutes true
+param *.visualizer.*LinkVisualizer.lineShift 0
+param *.visualizer.networkRouteVisualizer.lineShift 0
+param *.visualizer.networkRouteVisualizer.packetFilter "\"UDPData*\""
+param *.host*.wlan[0].radio.transmitter.communicationRange 250m
+param *.hostR1.wlan[0].radio.displayCommunicationRange true
+param *.hostA.wlan[0].radio.displayCommunicationRange true
+param *.visualizer.sceneVisualizer.descriptionFigure "\"title\""
+param *.visualizer.mediumVisualizer.displaySignals true
+param *.visualizer.physicalLinkVisualizer.displayLinks true
+param *.visualizer.physicalLinkVisualizer.packetFilter "\"UDPData*\""
+param *.host*.ipv4.arp.typename "\"GlobalArp\""
+param *.hostA.numApps 1
+param *.hostA.app[0].typename "\"UdpBasicApp\""
+param *.hostA.app[0].destAddresses "\"hostB\""
+param *.hostA.app[0].destPort 5000
+param *.hostA.app[0].messageLength 1000B
+param *.hostA.app[0].sendInterval exponential(12ms)
+param *.hostA.app[0].packetName "\"UDPData\""
+param *.hostB.numApps 1
+param *.hostB.app[0].typename "\"UdpSink\""
+param *.hostB.app[0].localPort 5000
+param *.host*.wlan[0].typename "\"AckingWirelessInterface\""
+param *.host*.wlan[0].mac.useAck false
+param *.host*.wlan[0].mac.fullDuplex false
+param *.host*.wlan[0].radio.transmitter.communicationRange 500m
+param *.hostA.wlan[0].radio.displayCommunicationRange true
+param *.host*.wlan[0].radio.receiver.ignoreInterference true
+param *.host*.wlan[0].mac.headerLength 23B
+param *.host*.**.bitrate 1Mbps
+
+vector 0 WirelessNetwork1.hostA.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 WirelessNetwork1.hostB.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 2 WirelessNetwork1.hostR1.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 WirelessNetwork1.hostR2.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 4 WirelessNetwork1.hostR3.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 WirelessNetwork1.hostR4.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 6 WirelessNetwork1.hostR5.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 7 WirelessNetwork1.hostR6.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 8 WirelessNetwork1.hostR7.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 9 WirelessNetwork1.hostR8.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 10 WirelessNetwork1.hostR9.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 11 WirelessNetwork1.hostR10.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 12 WirelessNetwork1.hostR11.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 13 WirelessNetwork1.hostR12.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 14 WirelessNetwork1.hostR13.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 15 WirelessNetwork1.hostR14.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 16 WirelessNetwork1.hostR15.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 17 WirelessNetwork1.hostR16.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 18 WirelessNetwork1.hostR17.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 19 WirelessNetwork1.hostR18.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 20 WirelessNetwork1.hostR19.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 21 WirelessNetwork1.hostR20.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 22 WirelessNetwork1.hostR21.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 23 WirelessNetwork1.hostR22.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 24 WirelessNetwork1.hostR23.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 25 WirelessNetwork1.hostA.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 26 WirelessNetwork1.hostB.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 27 WirelessNetwork1.hostR1.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 28 WirelessNetwork1.hostR2.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 29 WirelessNetwork1.hostR3.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 30 WirelessNetwork1.hostR4.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 31 WirelessNetwork1.hostR5.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 32 WirelessNetwork1.hostR6.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 33 WirelessNetwork1.hostR7.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 34 WirelessNetwork1.hostR8.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 35 WirelessNetwork1.hostR9.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 36 WirelessNetwork1.hostR10.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 37 WirelessNetwork1.hostR11.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 38 WirelessNetwork1.hostR12.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 39 WirelessNetwork1.hostR13.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 40 WirelessNetwork1.hostR14.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 41 WirelessNetwork1.hostR15.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 42 WirelessNetwork1.hostR16.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 43 WirelessNetwork1.hostR17.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 44 WirelessNetwork1.hostR18.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 45 WirelessNetwork1.hostR19.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 46 WirelessNetwork1.hostR20.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 47 WirelessNetwork1.hostR21.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 48 WirelessNetwork1.hostR22.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 49 WirelessNetwork1.hostR23.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+0	0	0	0
+0	0	0	0
+0	0	0	2
+1	0	0	0
+1	0	0	0
+1	0	0	2
+2	0	0	0
+2	0	0	0
+2	0	0	2
+3	0	0	0
+3	0	0	0
+3	0	0	2
+4	0	0	0
+4	0	0	0
+4	0	0	2
+5	0	0	0
+5	0	0	0
+5	0	0	2
+6	0	0	0
+6	0	0	0
+6	0	0	2
+7	0	0	0
+7	0	0	0
+7	0	0	2
+8	0	0	0
+8	0	0	0
+8	0	0	2
+9	0	0	0
+9	0	0	0
+9	0	0	2
+10	0	0	0
+10	0	0	0
+10	0	0	2
+11	0	0	0
+11	0	0	0
+11	0	0	2
+12	0	0	0
+12	0	0	0
+12	0	0	2
+13	0	0	0
+13	0	0	0
+13	0	0	2
+14	0	0	0
+14	0	0	0
+14	0	0	2
+15	0	0	0
+15	0	0	0
+15	0	0	2
+16	0	0	0
+16	0	0	0
+16	0	0	2
+17	0	0	0
+17	0	0	0
+17	0	0	2
+18	0	0	0
+18	0	0	0
+18	0	0	2
+19	0	0	0
+19	0	0	0
+19	0	0	2
+20	0	0	0
+20	0	0	0
+20	0	0	2
+21	0	0	0
+21	0	0	0
+21	0	0	2
+22	0	0	0
+22	0	0	0
+22	0	0	2
+23	0	0	0
+23	0	0	0
+23	0	0	2
+24	0	0	0
+24	0	0	0
+24	0	0	2
+25	0	0	1
+26	0	0	1
+27	0	0	1
+28	0	0	1
+29	0	0	1
+30	0	0	1
+31	0	0	1
+32	0	0	1
+33	0	0	1
+34	0	0	1
+35	0	0	1
+36	0	0	1
+37	0	0	1
+38	0	0	1
+39	0	0	1
+40	0	0	1
+41	0	0	1
+42	0	0	1
+43	0	0	1
+44	0	0	1
+45	0	0	1
+46	0	0	1
+47	0	0	1
+48	0	0	1
+49	0	0	1
+

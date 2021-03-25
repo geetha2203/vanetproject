@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
+  <inputs>
+    <inputs name="/vanettutorials/simulations/wirelessnetwork/results/Wireless05-*.vec"/>
+    <inputs name="/vanettutorials/simulations/wirelessnetwork/results/Wireless05-*.sca"/>
+  </inputs>
+  <datasets>
+    <datasets name="wireless05">
+      <items xsi:type="scave:Add" filterPattern="module(WirelessNetwork1.hostA.app[0]) AND name(&quot;packets sent&quot;)"/>
+      <items xsi:type="scave:Add" filterPattern="module(WirelessNetwork1.hostB.udp) AND name(packetReceived:count)"/>
+      <items xsi:type="scave:LineChart" name="w05" lineNameFormat=""/>
+      <items xsi:type="scave:HistogramChart" name="w05"/>
+      <items xsi:type="scave:BarChart" name="w05"/>
+    </datasets>
+  </datasets>
+  <chartSheets>
+    <chartSheets name="default" charts="//@datasets/@datasets.0/@items.2 //@datasets/@datasets.0/@items.3 //@datasets/@datasets.0/@items.4"/>
+  </chartSheets>
+</scave:Analysis>

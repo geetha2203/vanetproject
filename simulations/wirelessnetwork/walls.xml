@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+-<environment>
+
+<object opacity="0.8" fill-color="203 65 84" material="concrete" shape="cuboid 5 100 4" orientation="0 0 0" position="min 130 300 0"/>
+
+</environment>

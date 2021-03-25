@@ -1,0 +1,192 @@
+file 357329 1612610450                                          
+version 2
+run Wireless10-0-20210206-16:49:46-20168
+attr configname Wireless10
+attr datetime 20210206-16:49:46
+attr experiment Wireless10
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network WirelessNetwork
+attr processid 20168
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.configurator.addStaticRoutes false
+param *.host*.typename "\"AodvRouter\""
+param *.hostB.wlan[0].radio.displayCommunicationRange true
+param *.visualizer.dataLinkVisualizer.packetFilter "\"AODV*\""
+param *.hostR*.mobility.typename "\"LinearMobility\""
+param *.hostR*.mobility.speed 12mps
+param *.hostR*.mobility.initialMovementHeading 270deg
+param *.host*.wlan[0].mac.queue.packetCapacity 10
+param *.visualizer.mobilityVisualizer.displayVelocities true
+param *.visualizer.mobilityVisualizer.displayMovementTrails true
+param *.host*.wlan[0].radio.energyConsumer.typename "\"StateBasedEpEnergyConsumer\""
+param *.host*.wlan[0].radio.energyConsumer.offPowerConsumption 0mW
+param *.host*.wlan[0].radio.energyConsumer.sleepPowerConsumption 1mW
+param *.host*.wlan[0].radio.energyConsumer.switchingPowerConsumption 1mW
+param *.host*.wlan[0].radio.energyConsumer.receiverIdlePowerConsumption 2mW
+param *.host*.wlan[0].radio.energyConsumer.receiverBusyPowerConsumption 5mW
+param *.host*.wlan[0].radio.energyConsumer.receiverReceivingPowerConsumption 10mW
+param *.host*.wlan[0].radio.energyConsumer.transmitterIdlePowerConsumption 2mW
+param *.host*.wlan[0].radio.energyConsumer.transmitterTransmittingPowerConsumption 100mW
+param *.host*.energyStorage.typename "\"IdealEpEnergyStorage\""
+param *.host*.wlan[0].radio.displayInterferenceRange false
+param *.hostR1.wlan[0].radio.displayCommunicationRange false
+param *.visualizer.mediumVisualizer.displaySignals false
+param *.host*.wlan[0].mac.useAck true
+param *.host*.wlan[0].typename "\"WirelessInterface\""
+param *.host*.wlan[0].radio.typename "\"UnitDiskRadio\""
+param *.host*.wlan[0].mac.typename "\"CsmaCaMac\""
+param *.host*.wlan[0].mac.ackTimeout 300us
+param *.host*.wlan[0].radio.receiver.ignoreInterference false
+param *.host*.wlan[0].radio.transmitter.interferenceRange 250m
+param *.hostA.wlan[0].radio.displayInterferenceRange true
+param *.visualizer.dataLinkVisualizer.packetFilter "\"\""
+param *.host*.forwarding true
+param *.configurator.config "xml(\"<config><interface hosts='**' address='10.0.0.x' netmask='255.255.255.0'/><autoroute metric='errorRate'/></config>\")"
+param *.configurator.optimizeRoutes false
+param *.host*.ipv4.routingTable.netmaskRoutes "\"\""
+param *.visualizer.physicalLinkVisualizer.displayLinks true
+param *.visualizer.dataLinkVisualizer.displayLinks true
+param *.visualizer.networkRouteVisualizer.displayRoutes true
+param *.visualizer.*LinkVisualizer.lineShift 0
+param *.visualizer.networkRouteVisualizer.lineShift 0
+param *.visualizer.networkRouteVisualizer.packetFilter "\"UDPData*\""
+param *.host*.wlan[0].radio.transmitter.communicationRange 250m
+param *.hostR1.wlan[0].radio.displayCommunicationRange true
+param *.hostA.wlan[0].radio.displayCommunicationRange true
+param *.visualizer.sceneVisualizer.descriptionFigure "\"title\""
+param *.visualizer.mediumVisualizer.displaySignals true
+param *.visualizer.physicalLinkVisualizer.displayLinks true
+param *.visualizer.physicalLinkVisualizer.packetFilter "\"UDPData*\""
+param *.host*.ipv4.arp.typename "\"GlobalArp\""
+param *.hostA.numApps 1
+param *.hostA.app[0].typename "\"UdpBasicApp\""
+param *.hostA.app[0].destAddresses "\"hostB\""
+param *.hostA.app[0].destPort 5000
+param *.hostA.app[0].messageLength 1000B
+param *.hostA.app[0].sendInterval exponential(12ms)
+param *.hostA.app[0].packetName "\"UDPData\""
+param *.hostB.numApps 1
+param *.hostB.app[0].typename "\"UdpSink\""
+param *.hostB.app[0].localPort 5000
+param *.host*.wlan[0].typename "\"AckingWirelessInterface\""
+param *.host*.wlan[0].mac.useAck false
+param *.host*.wlan[0].mac.fullDuplex false
+param *.host*.wlan[0].radio.transmitter.communicationRange 500m
+param *.hostA.wlan[0].radio.displayCommunicationRange true
+param *.host*.wlan[0].radio.receiver.ignoreInterference true
+param *.host*.wlan[0].mac.headerLength 23B
+param *.host*.**.bitrate 1Mbps
+
+vector 0 WirelessNetwork.hostA.energyStorage powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 1 WirelessNetwork.hostB.energyStorage powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 2 WirelessNetwork.hostA.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 WirelessNetwork.hostA.wlan[0].radio.energyConsumer powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 4 WirelessNetwork.hostB.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 WirelessNetwork.hostB.wlan[0].radio.energyConsumer powerConsumption:vector ETV
+attr interpolationmode sample-hold
+attr source powerConsumptionChanged
+attr title "Power consumption, vector"
+vector 6 WirelessNetwork.hostA.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 7 WirelessNetwork.hostB.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+0	5794 49 0 0 0 0 5 0 0.002 0.002 4e-006
+1	5843 49 0 0 0 0 5 0 0.002 0.002 4e-006
+2	5892 27 0 0 0 0 3 0 2 2 4
+3	5919 40 0 0 0 0 4 0 0.002 0.002 4e-006
+4	5959 27 0 0 0 0 3 0 2 2 4
+5	5986 40 0 0 0 0 4 0 0.002 0.002 4e-006
+6	6026 9 0 0 0 0 1 1 1 1 1
+7	6035 9 0 0 0 0 1 1 1 1 1
+vector 8 WirelessNetwork.hostA.app[0] packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 9 WirelessNetwork.hostA.udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 10 WirelessNetwork.hostA.wlan[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 11 WirelessNetwork.hostA.wlan[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 12 WirelessNetwork.hostA.wlan[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 13 WirelessNetwork.hostA.wlan[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 14 WirelessNetwork.hostA.energyStorage residualEnergyCapacity:vector ETV
+attr interpolationmode linear
+attr source residualEnergyCapacityChanged
+attr title "Residual energy capacity, vector"
+vector 15 WirelessNetwork.hostA.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+0	7564 504 17 92 0.025903069027 0.346183349501 20 0 0.1 0.22 0.02004
+2	8068 92 17 92 0.025903069027 0.346183349501 4 2 3 10 26
+3	8160 504 17 92 0.025903069027 0.346183349501 20 0 0.1 0.22 0.02004
+6	8664 92 17 92 0.025903069027 0.346183349501 4 0 1 2 2
+8	8756 1132 8 158 0.022315250545 0.578451508808 43 1000 1000 43000 43000000
+9	9888 1181 10 159 0.022315250545 0.578451508808 45 32 1008 43408 43692800
+10	11069 50 15 87 0.025433069027 0.345225349501 2 79 79 158 12482
+11	11119 96 15 87 0.025433069027 0.345225349501 4 0 1 2 2
+12	11215 50 15 87 0.025433069027 0.345225349501 2 79 79 158 12482
+13	11265 48 15 87 0.025433069027 0.345225349501 2 0 0 0 0
+14	11313 164 17 92 0.025903069027 0.346183349501 4 -0.000835054699002 -5.1806138054e-005 -0.001773721674112 1.2965591420568e-006
+15	11477 192 17 92 0.025903069027 0.346183349501 8 0 2 8 12
+vector 16 WirelessNetwork.hostA.app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+vector 17 WirelessNetwork.hostB.app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+0	11969 9608 239 15381 0.82278382401 59.062672433945 340 0 0.1 3.74 0.34068
+2	21577 1772 239 15381 0.82278382401 59.062672433945 68 2 3 170 442
+3	23349 9608 239 15381 0.82278382401 59.062672433945 340 0 0.1 3.74 0.34068
+6	32957 1772 239 15381 0.82278382401 59.062672433945 68 0 1 34 34
+8	34729 145203 161 15681 0.582999052379 59.95970685145 4999 1000 1000 4999000 4999000000
+9	179932 146123 162 15682 0.582999052379 59.95970685145 5033 32 1008 5040080 5079338752
+10	326055 954 237 15376 0.82259382401 59.061334433945 34 79 79 2686 212194
+11	327009 1840 237 15376 0.82259382401 59.061334433945 68 0 1 34 34
+12	328849 954 237 15376 0.82259382401 59.061334433945 34 79 79 2686 212194
+13	329803 920 237 15376 0.82259382401 59.061334433945 34 0 0 0 0
+14	330723 2962 239 15381 0.82278382401 59.062672433945 68 -0.12069372886789 -0.00178825564802 -4.156748394983 0.33579126686001
+15	333685 3680 239 15381 0.82278382401 59.062672433945 136 0 2 136 204
+16	337365 9981 15686 15686 0.1 60 600 0 0 0 0
+17	347346 9981 15686 15686 0.1 60 600 0 0 0 0
+
